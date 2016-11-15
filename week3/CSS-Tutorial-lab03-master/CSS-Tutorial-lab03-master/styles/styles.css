@@ -1,0 +1,64 @@
+main div {
+  display: none;
+}
+main div:target {
+  display: block;
+  overflow: auto;
+  background: #ccc;
+  animation: fade 1s linear 1;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  24% {
+    opacity: 0.33;
+  }
+  66% {
+    opacity: 0.66;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*-contigous-list-numbering*/
+
+.numlist {
+      counter-reset: mylist; /* 'mylist' is just a made-up name we give it */
+    }
+    .numlist li {
+      list-style-type: none; /* display: block; also removes numbers */
+    }
+    .numlist li:before {
+      content: counter(mylist) ". ";
+      counter-increment: mylist;
+    }
+    .numlist2 {
+      counter-reset: mylist 4;
+    }
+
+    /* variations with increment additions and alignment */
+    
+    .numlist3 li:before,
+    .numlist4 li:before {
+      counter-increment: mylist 3; /* count list numbers in threes */
+    }
+    .numlist3 li:before {
+      float: left; /* to pad numbers (or use display: inline-block;) */
+      width: 1.75em; /* aligns list items for both 1- and 2-digit numbers */
+    }
+    .numlist4 li:before {
+      float: left;
+      text-align: right;
+      padding-right: 0.5em; /* padding combined with... */
+      width: 1.25em; /* ...width aligns list items */
+    }
+
+/*target selector */
+#link2 :target {
+    background-color: #e5eecc;
+    transition: all 2s ease;
+  }
+

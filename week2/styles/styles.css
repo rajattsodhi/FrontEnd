@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  background-color: #eee;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+#container {
+  /*width: 900px;*/
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+}
+header {
+  background-color: #565;
+  color: #fff;
+}
+header h1 {
+  font-size: 1.5em;
+  letter-spacing: 6px;
+  margin: 0;
+  line-height: 3em;
+  text-align: center; /* note CSS spelling of ‘center’ */
+}
+
+nav {
+  /*background-color: #bdcdbd;*/
+  /*width: 150px;*/
+  font-size: 1em;
+  line-height: 2.5em;
+  text-align: center;
+  background: #9a9;
+  /*background: #000;*/
+  /*border-bottom: 2px solid #565;*/
+}
+nav a:link,
+nav a:visited {
+  display: inline-block;
+  background: #9a9;
+  width: 16%; /* 20% with 5 items will fill the width */
+  text-decoration: none;
+  color: #000;
+  /*border-bottom: 4px solid #565;*/
+  transition: all 0.5s;
+}
+nav a:hover,
+nav a.here  {
+  background: #676;
+  color: #fff;
+  /*border-bottom: 4px solid #9aa;*/
+}
+nav a.here {
+  background: #565;
+}
+
+main {
+  /*width: 490px;*/
+  /*float: right;*/
+  clear: both;
+  padding: 1em 30px 2em; /* top, right-left, bottom */
+  background-color: #fff;
+  font-size: 1.25em;
+  line-height: 1.85em;
+  overflow: auto;
+}
+
+section {
+  clear: both;
+  margin-top: 1.5em;
+  overflow: auto;
+}
+section h2 {
+  font-size: 1.25em;
+  margin: 0;
+  border-top: 2px solid #676;
+  color: #464;
+}
+section:first-child h2 {
+  border-top: none;
+}
+/* SEE http://www.w3schools.com/cssref/sel_firstchild.asp */
+
+section p {
+  margin: 1em 0 0; /* top, right and left, bottom */
+}
+section a[href="#"] {
+  display: block;
+  color: #999;
+  text-align: right;
+}
+/* SEE http://www.w3schools.com/css/css_attribute_selectors.asp */
+
+figure {
+  /*width: 500px;*/
+  width: 40%;
+  float: left;
+  border: 1px solid #333;
+  background: #565;
+  color: #fff;
+  padding: 0;
+  margin: 1em 2% 0.25em 0; /* top, right, bottom, left */
+  border-radius: 8px;
+  overflow: hidden;
+}
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+figure figcaption {
+  text-align: center;
+  padding: 2px 6px;
+}
+
+footer {
+  clear: both;
+  border-top: 2px solid #676;
+  padding: 0.5em 30px; /* top-bottom, right-left */
+  background-color: #9a9;
+  text-align: right;
+}
+/*#container,
+header,
+main,
+nav,
+section,
+figure,
+footer {
+  box-sizing: border-box;
+}*/
